@@ -1,0 +1,78 @@
+class EvilCharacterWarrior:
+    def __init__(self, name):
+        self.name = name
+        self.attack = 25
+        self.health = 100
+        self.weapon = "Топор"
+        self.speedOfAttack = 10
+
+    def attacking(self):
+        print("Я ударил тебя на " + self.attack + " " + self.weapon + "ом")
+
+
+class KotBaton:
+
+    def __init__(self, name, age, color, weight, x, y):
+        self.name = name
+        self.age = age
+        self.color = color
+        self.weight = weight
+        self.coordX = x
+        self.coordY = y
+        self.healthPoints = 100
+
+    def meow(self):
+        print("Meow!")
+
+    def HealSelf(self):
+        if int(self.healthPoints) < 100:
+            self.healthPoints = 100
+            print("Я вылечился ^^")
+
+class Sobaken(KotBaton):
+    def __init__(self, name, age, color, weight, x, y):
+        super().__init__(name, age, color, weight, x, y)
+
+    def bark(self):
+        print("GAF!")
+
+
+
+class Goblin:
+    def __init__(self, name, x, y, ):
+        self.name = name
+        self.coordX = x
+        self.coordY = y
+        self.money = 100
+        self.healthPoints = 50
+        self.stealingMoney = "25"
+
+    def stealmoney(self, opponent):
+        print("Haha! I stole your " + self.stealingMoney + " money!!")
+            if opponent <=
+
+class Shop:
+    def __init__(self, name, x, y, size, kind):
+        self.name = name
+        self.coordX = x
+        self.coordY = y
+        self.size = size
+        self.kind = kind
+
+
+BooksShop = Shop("Books Shop!", 20, 15, "Small", "Books")
+
+
+
+
+print(BooksShop.size)
+Vasjka = KotBaton("Vasjka", 23, "black", 25, 0, 1)
+BadBoy = EvilCharacterWarrior("Pegl")
+Bobik = Sobaken("Bobik", 87, "black", 10, 1, 2)
+Gremlen = Goblin("Gremlen", 1, 2)
+print(Vasjka.color)
+print(BadBoy.name)
+Vasjka.meow()
+Bobik.bark()
+print(Bobik.weight)
+Gremlen.stealmoney()
